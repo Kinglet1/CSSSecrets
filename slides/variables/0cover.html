@@ -1,0 +1,39 @@
+<style>
+	* {
+		margin: 0;
+		padding: 0;
+	}
+
+	body {
+		height: 100%;
+		overflow: hidden;
+		background: url('cover.jpg') center center no-repeat;
+		background-size: cover;
+		font-family: Arial, sans-serif;
+		position: relative;
+	}
+
+	body:before {
+		content: '';
+		position: absolute;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		background: #000;
+		opacity: .3;
+	}
+
+	h1 {
+		font-size: 150px;
+		position: absolute;
+		top: 60%;
+		left: 35%;
+	}
+
+	.highlighted {
+		color: coral;
+	}
+</style>
+
+<h1><span class="highlighted">6.</span> CSS variables</h1>

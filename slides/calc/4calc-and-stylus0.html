@@ -1,0 +1,67 @@
+<style>
+	* {
+		margin: 0;
+		padding: 0;
+	}
+
+	body {
+		font-size: 20px;
+		line-height: 24px;
+		font-family: Arial, sans-serif;
+	}
+
+	.codeblock {
+		background: #000;
+		color: #fff;
+		width: 40%;
+		margin: 0 auto;
+		padding: 40px;
+		margin-top: 100px;
+		box-sizing: border-box;
+		font-family: monospace;
+	}
+
+	h1 {
+		font-size: 50px;
+		line-height: 60px;
+		text-align: center;
+		margin-top: 50px;
+	}
+
+	.red-cross {
+		margin: 0 auto;
+		margin-top: 50px;
+		display: none;
+	}
+
+	.red-cross_visible_yes {
+		display: block;
+	}
+</style>
+
+
+<h1>
+	Stylus + calc()
+</h1>
+
+<div class="codeblock">
+	<pre>
+	$width = 500px
+
+	.blockname {
+		width $width
+		padding: 0 calc(50% - $width/2);
+	}
+	</pre>
+</div>
+
+<img class="red-cross" src="red-cross.png" alt="">
+
+<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+<script>
+	$(document).keypress(function(e) {
+		if(e.which == 13) {
+			$('.red-cross').addClass('red-cross_visible_yes');
+		}
+	});
+</script>
