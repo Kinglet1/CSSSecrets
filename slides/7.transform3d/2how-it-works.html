@@ -1,0 +1,83 @@
+<link rel="stylesheet" href="../../common/css/reset.css">
+<link rel="stylesheet" href="../../common/css/base.css">
+
+<style>
+    .wrapper {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .wrapper__item {
+        width: 45%;
+        padding-top: 40px;
+    }
+
+    .wrapper__item:first-child {
+        width: 40%;
+    }
+
+    img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .codeblock {
+        margin: 0;
+    }
+</style>
+
+<div class="wrapper">
+    <div class="wrapper__item">
+        <img src="boxes.jpg" alt="">
+    </div>
+
+    <div class="wrapper__item">
+        <div class="codeblock">
+<pre>
+.container {
+    transform-style: preserve-3d;
+    transform: perspective(900px);
+}
+
+.face_pos_center {
+    top: 0;
+    left: 0;
+    transform: rotate3d(0,1,0,180deg);
+}
+
+.face_pos_right {
+    right: -300px;
+    top: 0;
+    transform-origin: 0 0;
+    transform: rotate3d(0, 1, 0, -90deg);
+}
+
+.face_pos_bottom {
+    top: 300px;
+    left: 0;
+    transform-origin: 0 0;
+    transform: rotate3d(1, 0, 0, 90deg);
+}
+
+.face_pos_left {
+    left: -300px;
+    top: 0;
+    transform-origin: 100% 0;
+    transform: rotate3d(0, 1, 0, 90deg);
+}
+
+.face_pos_top {
+    top: -300px;
+    left: 0;
+    transform-origin: 0 100%;
+    transform: rotate3d(1, 0, 0, -90deg);
+}
+
+.face_pos_front {
+    transform: translate3d(0, 0, 300px);
+}
+</pre>
+        </div>
+    </div>
+</div>

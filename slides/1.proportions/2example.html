@@ -1,0 +1,51 @@
+<link rel="stylesheet" href="../../common/css/reset.css">
+<link rel="stylesheet" href="../../common/css/base.css">
+
+<style>
+    .element {
+        background-color: coral;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 40%;
+    }
+
+    .element:before {
+        display: block;
+        content: '';
+        margin-top: 50%;
+    }
+
+    .element__inner {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        text-align: center;
+        transform: translateY(-50%);
+    }
+
+    .element__height,
+    .element__width {
+        position: absolute;
+        font-size: 30px;
+    }
+
+    .element__height {
+        right: calc(100% + 20px);
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .element__width {
+        bottom: calc(100% + 20px);
+        left: 50%;
+        transform: translateX(-50%);
+    }
+</style>
+
+<div class="element">
+    <div class="element__height">1x</div>
+    <div class="element__width">2x</div>
+    <div class="element__inner">Ширина этого блока заранее неизвестна, а высота должна равняться половине ширины</div>
+</div>

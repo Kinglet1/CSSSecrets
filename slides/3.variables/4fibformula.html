@@ -1,0 +1,150 @@
+<link rel="stylesheet" href="../../common/css/reset.css">
+<link rel="stylesheet" href="../../common/css/base.css">
+
+<style>
+    body {
+        background: #000;
+        overflow: hidden;
+    }
+
+    .wrapper {
+        display: flex;
+    }
+
+    .img {
+        width: 50%;
+        background: url("fibcat.jpg");
+        background-size: contain;
+        height: 100%;
+        background-repeat: no-repeat;
+    }
+
+    /**/
+
+    .numbers {
+        width: 100px;
+        margin-top: 20px;
+        margin-left: 20px;
+    }
+
+    .numbers div {
+        display: none;
+        width: 50px;
+        height: 50px;
+        font-size: 30px;
+        line-height: 30px;
+        text-align: center;
+        border: 1px solid;
+        color: #fff;
+    }
+
+    .visible {
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .current {
+        color: coral !important;
+        position: relative;
+    }
+
+    .current:before {
+        content: '+';
+        position: absolute;
+        top: 100%;
+        transform: translateY(-50%);
+        left: calc(100% + 10px);
+    }
+
+    .current + .current .current:before {
+        display: none;
+    }
+
+    .sum {
+        color: lightgreen !important;
+        position: relative;
+    }
+
+    .sum:before {
+        content: '=';
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: calc(100% + 10px);
+    }
+
+    .codeblock {
+        display: none;
+    }
+</style>
+
+<div class="wrapper">
+    <div class="img"></div>
+
+    <div class="numbers">
+        <div>1</div>
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>5</div>
+        <div>8</div>
+        <div>13</div>
+        <div>21</div>
+        <div>34</div>
+        <div>55</div>
+        <div>89</div>
+        <div>144</div>
+        <div>233</div>
+        <div>377</div>
+    </div>
+
+<div class="codeblock">
+<pre>
+function fib(n) {
+  var a = 1,
+    b = 1;
+  for (var i = 3; i <= n; i++) {
+    var c = a + b;
+    a = b;
+    b = c;
+  }
+  return b;
+}
+</pre>
+</div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+<script>
+    $(document).ready(function() {
+        var a = 0;
+        var b = 1;
+        var c = 2;
+
+        var $items = $('.numbers div');
+
+        setInterval(function upNumbers() {
+            $items.removeClass('current');
+            $items.removeClass('sum');
+
+            $items.eq(a).addClass('current');
+            $items.eq(b).addClass('current');
+            $items.eq(c).addClass('sum');
+
+            $items.eq(a).addClass('visible');
+            $items.eq(b).addClass('visible');
+            $items.eq(c).addClass('visible');
+
+            a++;
+            b++;
+            c++;
+        }, 1000);
+    });
+
+    $(document).keypress(function(e) {
+        if(e.which == 13) {
+            $('.codeblock').fadeIn();
+        }
+    });
+</script>

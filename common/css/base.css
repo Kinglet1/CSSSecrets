@@ -1,0 +1,36 @@
+body {
+    font-family: Arial, sans-serif;
+    position: relative;
+}
+
+.highlighted {
+    color: coral;
+}
+
+h1 {
+    font-size: 100px;
+    line-height: 100px;
+    position: absolute;
+    display: flex;
+    width:45%;
+}
+
+h1 .highlighted {
+    padding-right: 15px;
+}
+
+.codeblock {
+    background: #000;
+    color: #fff;
+    margin: 0 auto;
+    padding: 40px;
+    margin-top: 100px;
+    box-sizing: border-box;
+    font-family: monospace;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+a {
+    color: #0066cc;
+}

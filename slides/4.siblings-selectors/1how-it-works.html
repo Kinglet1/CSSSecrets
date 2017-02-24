@@ -1,0 +1,112 @@
+<link rel="stylesheet" href="../../common/css/reset.css">
+<link rel="stylesheet" href="../../common/css/base.css">
+
+<style>
+    body {
+        background: #000;
+        color: #fff;
+    }
+
+    .sibling, .target {
+        margin-bottom: 30px;
+        text-align: center;
+        font-size: 20px;
+        line-height: 24px;
+        padding: 15px;
+    }
+
+    .target {
+        margin-top: 20px;
+        border: 1px dashed #fff;
+    }
+
+    .target ~ .sibling .inner {
+        border: 3px dashed red;
+    }
+
+    .target + .sibling {
+        border: 3px dashed blue;
+    }
+
+    .wrapper {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .wrapper__item {
+        width: 40%;
+    }
+
+    .codeblock {
+        margin-top: 0;
+    }
+
+    .inner {
+        padding: 15px;
+    }
+
+    .title {
+        font-size: 30px;
+        position: relative;
+        padding-left: 80px;
+    }
+
+    .title:before {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        border-bottom: 4px dashed red;
+        width: 50px;
+        height: 0;
+        content: '';
+        transform: translateY(-2px);
+    }
+
+    .title_type_blue:before {
+        border-bottom: 4px dashed blue;
+    }
+
+    .wrapper__item:last-child {
+        margin-top: 40px;
+    }
+</style>
+
+<div class="wrapper">
+<div class="wrapper__item">
+<div class="codeblock">
+<pre>
+&lt;div class="target"&gt;Target element&lt;/div&gt;
+
+&lt;div class="sibling"&gt;Sibling1&lt;/div&gt;
+&lt;div class="sibling"&gt;Sibling2&lt;/div&gt;
+&lt;div class="sibling"&gt;Sibling3&lt;/div&gt;
+</pre>
+</div>
+
+<div class="codeblock">
+<pre>
+.target ~ .sibling
+  border 3px dashed red
+
+.target + .sibling
+  border 3px dashed blue
+</pre>
+</div>
+</div>
+
+<div class="wrapper__item">
+    <div class="title title_type_red">~</div>
+    <div class="title title_type_blue">+</div>
+
+    <div class="target">Target element</div>
+    <div class="sibling">
+        <div class="inner">Sibling1</div>
+    </div>
+    <div class="sibling">
+        <div class="inner">Sibling2</div>
+    </div>
+    <div class="sibling">
+        <div class="inner">Sibling3</div>
+    </div>
+</div>
+</div>

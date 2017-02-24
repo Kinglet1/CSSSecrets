@@ -1,0 +1,113 @@
+<link rel="stylesheet" href="../../common/css/reset.css">
+<link rel="stylesheet" href="../../common/css/base.css">
+
+<style>
+	* {
+		margin: 0;
+		padding: 0;
+	}
+
+	body {
+		font-size: 20px;
+		line-height: 24px;
+		font-family: Arial, sans-serif;
+		--background: red;
+	}
+
+	.codeblock {
+		background: #000;
+		color: #fff;
+		width: 50%;
+		margin: 0 auto;
+		padding: 40px;
+		margin-top: 100px;
+		box-sizing: border-box;
+		font-family: monospace;
+	}
+
+	.figure1,
+	.figure2,
+	.figure3 {
+		display: inline-block;
+		vertical-align: middle;
+		width: 200px;
+		height: 200px;
+		margin: 0 20px;
+	}
+
+	.figures {
+		display: flex;
+		margin-top: 30px;
+		justify-content: center;
+	}
+
+	.figure1 {
+		background: var(--background);
+	}
+
+	.figure2 {
+		border: 5px solid var(--background);
+		border-radius: 150px;
+	}
+
+	.figure3 {
+		color: var(--background);
+		border: 2px dashed lightgray;
+	}
+
+	.figures__item {
+		text-align: center;
+	}
+
+	.figures__title {
+		margin-bottom: 10px;
+	}
+
+	.codeblock {
+		display: none;
+	}
+</style>
+
+<div class="figures">
+	<div class="figures__item">
+		<div class="figures__title">.figure1</div>
+		<div class="figure1"></div>
+	</div>
+	<div class="figures__item">
+		<div class="figures__title">.figure2</div>
+		<div class="figure2"></div>
+	</div>
+	<div class="figures__item">
+		<div class="figures__title">.figure3</div>
+		<div class="figure3">Текст внутри блока</div>
+	</div>
+</div>
+
+<div class="codeblock">
+<pre>
+.body {
+	--background: red;
+}
+
+.figure1 {
+	background: var(--background);
+}
+
+.figure2 {
+	border: 5px solid var(--background);
+}
+
+.figure3 {
+	color: var(--background);
+}
+</pre>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+<script>
+	$(document).keypress(function(e) {
+		if(e.which == 13) {
+			$('.codeblock').fadeIn(2000);
+		}
+	});
+</script>

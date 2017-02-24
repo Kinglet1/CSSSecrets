@@ -16,7 +16,7 @@
 		width: 40%;
 		margin: 0 auto;
 		padding: 40px;
-		margin-top: 100px;
+		margin-top: 50px;
 		box-sizing: border-box;
 		font-family: monospace;
 	}
@@ -25,7 +25,7 @@
 		font-size: 50px;
 		line-height: 60px;
 		text-align: center;
-		margin-top: 50px;
+		margin-top: 30px;
 	}
 
 	.red-cross {
@@ -37,42 +37,25 @@
 	.red-cross_visible_yes {
 		display: block;
 	}
-
-	.highlighted {
-		color: coral;
-	}
-	
-	.link {
-		color: #06c;
-	}
-
-	.stylus-link-wrapper {
-		text-align: center;
-		margin-top: 20px;
-	}
 </style>
 
 
 <h1>
-	Stylus + calc() + <span class="highlighted">Sprintf</span>
+	Stylus + calc()
 </h1>
 
-<div class="stylus-link-wrapper">
-	<a class="link" href="http://stylus-lang.com/docs/operators.html#sprintf">http://stylus-lang.com/docs/operators.html#sprintf</a>
-</div>
-
 <div class="codeblock">
-	<pre>
-	$width = 500px
+<pre>
+$width = 500px
 
-	.blockname {
-		width $width
-		padding "0 calc(50% - %s/2)" % $width
-	}
-	</pre>
+.blockname {
+	width $width
+	padding: 0 calc(50% - $width/2);
+}
+</pre>
 </div>
 
-<img class="red-cross" src="green-tick.png" alt="" width="300" height="300">
+<img class="red-cross" src="red-cross.png" alt="" width="150" height="150">
 
 <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
 <script>
