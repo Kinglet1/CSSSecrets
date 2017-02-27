@@ -2,9 +2,15 @@
 <link rel="stylesheet" href="../../common/css/base.css">
 
 <style>
+	body {
+		background: #000;
+	}
+
     .codeblock {
         padding: 60px;
         margin: 0;
+	    font-size: 30px;
+	    line-height: 34px;
     }
 
     .codeblock:first-child {
@@ -13,7 +19,6 @@
 
     .pagewrap {
         position: absolute;
-        width: 50%;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
@@ -52,20 +57,18 @@
 
 <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
 <script>
-    $(document).keypress(function(e) {
-        if(e.which == 13) {
-            $('#visible').hide();
-            $('#hidden').show();
-        }
-    });
-</script>
+	var flag = 0;
 
-<script>
     $(document).keydown(function(e) {
-        if(e.which == 39) {
-            window.location.replace('https://kinglet1.github.io/CSSSecrets/slides/1.proportions/2example.html');
-        }
+	    if(e.which == 39) {
+		    if (!flag) {
+			    $('#visible').hide();
+			    $('#hidden').show();
+			    flag = 1;
+		    }
+		    else {
+			    window.location.replace('https://kinglet1.github.io/CSSSecrets/slides/1.proportions/2example.html');
+		    }
+	    }
     });
 </script>
-
-<div style="position: absolute; color: gray; top: 0; left: 0">press enter</div>

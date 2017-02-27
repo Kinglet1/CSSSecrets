@@ -34,7 +34,7 @@
 		position: absolute;
 		top: 10px;
 		left: 10px;
-		color: gray;
+		color: #000;
 		display: none;
 	}
 
@@ -93,20 +93,18 @@
 
 <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
 <script>
-	$(document).keypress(function(e) {
-		if(e.which == 13) {
-			$('.wrapper').addClass('wrapper_code-visible_yes');
-			$('.codeblock').fadeIn(2000);
-		}
-	});
-</script>
+	var flag = 0;
 
-<script>
 	$(document).keydown(function(e) {
 		if(e.which == 39) {
-			window.location.replace('https://kinglet1.github.io/CSSSecrets/slides/2.calc/2example1.html');
+			if (!flag) {
+				$('.wrapper').addClass('wrapper_code-visible_yes');
+				$('.codeblock').fadeIn(2000);
+				flag = 1;
+			}
+			else {
+				window.location.replace('https://kinglet1.github.io/CSSSecrets/slides/2.calc/2example1.html');
+			}
 		}
 	});
 </script>
-
-<div style="position: absolute; color: gray; top: 0; left: 0">press enter</div>

@@ -2,26 +2,33 @@
 <link rel="stylesheet" href="../../common/css/base.css">
 
 <style>
-    img {
-        display: block;
-        margin: 0 auto;
-        max-height: 80%;
-        max-width: 80%;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
+	.wrapper {
+		width: 80%;
+		margin: 0 auto;
+	}
+
+	img {
+		display: block;
+		width: 100%;
+		margin-top: 40px;
+		height: auto;
+	}
 </style>
 
-<img src="browsers2.png" alt="">
+<div class="wrapper">
+	<div style="margin-top: 40px; font-size: 20px">
+		<a href="http://caniuse.com/#feat=css-sel2">CSS 2.1 selectors: + (adjacent sibling selector)</a>
+	</div>
+
+	<img src="browsers2.png" alt="">
+</div>
 
 
 <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
 <script>
-    $(document).keydown(function(e) {
-        if(e.which == 39) {
-            window.location.replace('https://kinglet1.github.io/CSSSecrets/slides/5.target/0cover.html');
-        }
-    });
+	$(document).keydown(function(e) {
+		if(e.which == 39) {
+			window.location.replace('https://kinglet1.github.io/CSSSecrets/slides/5.target/0cover.html');
+		}
+	});
 </script>

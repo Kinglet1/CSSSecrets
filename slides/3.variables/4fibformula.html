@@ -50,15 +50,15 @@
     }
 
     .current:before {
-        content: '+';
+        /*content: '+';*/
         position: absolute;
         top: 100%;
         transform: translateY(-50%);
         left: calc(100% + 10px);
     }
 
-    .current + .current .current:before {
-        display: none;
+    .current:last-of-type:before {
+	    display: none;
     }
 
     .sum {
@@ -67,7 +67,7 @@
     }
 
     .sum:before {
-        content: '=';
+        /*content: '=';*/
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
@@ -115,47 +115,47 @@ function fib(n) {
 </div>
 </div>
 
+
 <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
 <script>
-    $(document).ready(function() {
-        var a = 0;
-        var b = 1;
-        var c = 2;
+	var flag = 0;
 
-        var $items = $('.numbers div');
+	var a = 0;
+	var b = 1;
+	var c = 2;
 
-        setInterval(function upNumbers() {
-            $items.removeClass('current');
-            $items.removeClass('sum');
+	var $items = $('.numbers div');
 
-            $items.eq(a).addClass('current');
-            $items.eq(b).addClass('current');
-            $items.eq(c).addClass('sum');
+	$(document).keydown(function(e) {
+		if(e.which == 39) {
+			if (!flag) {
+				setInterval(function upNumbers() {
+					$items.removeClass('current');
+					$items.removeClass('sum');
 
-            $items.eq(a).addClass('visible');
-            $items.eq(b).addClass('visible');
-            $items.eq(c).addClass('visible');
+					$items.eq(a).addClass('current');
+					$items.eq(b).addClass('current');
+					$items.eq(c).addClass('sum');
 
-            a++;
-            b++;
-            c++;
-        }, 1000);
-    });
+					$items.eq(a).addClass('visible');
+					$items.eq(b).addClass('visible');
+					$items.eq(c).addClass('visible');
 
-    $(document).keypress(function(e) {
-        if(e.which == 13) {
-            $('.codeblock').fadeIn();
-        }
-    });
+					a++;
+					b++;
+					c++;
+				}, 1000);
+				flag = 1;
+			}
+
+			else if (flag == 1) {
+				$('.codeblock').fadeIn();
+				flag = 2;
+			}
+
+			else {
+				window.location.replace('https://kinglet1.github.io/CSSSecrets/slides/3.variables/5fibdemo.html');
+			}
+		}
+	});
 </script>
-
-<script>
-    $(document).keydown(function(e) {
-        if(e.which == 39) {
-            window.location.replace('https://kinglet1.github.io/CSSSecrets/slides/4.siblings-selectors/0cover.html');
-        }
-    });
-</script>
-
-<div style="position: absolute; color: gray; top: 0; left: 0">press enter</div>
-<div style="position: absolute; color: gray; top: 0; left: 0">go to codepen demo</div>
