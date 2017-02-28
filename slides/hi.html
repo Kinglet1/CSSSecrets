@@ -80,19 +80,20 @@
     </div>
 </div>
 
+
 <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
 <script>
-    $(document).keypress(function(e) {
-        if(e.which == 13) {
-            $('#links').fadeIn();
-        }
-    });
-</script>
+	var flag = 0;
 
-<script>
-    $(document).keydown(function(e) {
-        if(e.which == 39) {
-            window.location.replace('https://kinglet1.github.io/CSSSecrets/slides/before.html');
-        }
-    });
+	$(document).keydown(function(e) {
+		if(e.which == 39) {
+			if (!flag) {
+				$('#links').fadeIn();
+				flag = 1;
+			}
+			else {
+				window.location.replace('https://kinglet1.github.io/CSSSecrets/slides/before.html');
+			}
+		}
+	});
 </script>

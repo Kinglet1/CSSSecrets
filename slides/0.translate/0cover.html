@@ -5,7 +5,6 @@
     body {
         height: 100%;
         overflow: hidden;
-        background: url('../../common/images/0cover.jpg') center center no-repeat;
         background-size: cover;
         font-family: Arial, sans-serif;
         position: relative;
@@ -13,11 +12,21 @@
 
     h1 {
         top: 50px;
-        right: 50px;
+        left: 50px;
     }
+
+	img {
+		position: absolute;
+		right: 50px;
+		bottom: 50px;
+		width: 50%;
+		height: auto;
+	}
 </style>
 
 <h1><span class="highlighted">0.</span> <span>transform translate <span style="white-space: nowrap">в %</span></span></h1>
+
+<img src="../../common/images/0cover.jpg" alt="">
 
 <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
 <script>

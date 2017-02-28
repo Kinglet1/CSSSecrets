@@ -1,13 +1,55 @@
 <link rel="stylesheet" href="../common/css/reset.css">
 <link rel="stylesheet" href="../common/css/base.css">
 
-<h1>Ссылки</h1>
+<style>
+	h1 {
+		position: relative;
+		display: block;
+		margin: 40px 0;
+		width: 100%;
+	}
+
+	ul {
+		margin: 0 auto;
+		font-size: 20px;
+	}
+
+	ul li {
+		margin-bottom: 30px;
+	}
+
+	.wrapper {
+		width: 60%;
+		margin: 0 auto;
+	}
+</style>
+
+<div class="wrapper">
+
+	<h1>Cсылки</h1>
+
+	<ul>
+		<li>
+			<a href="https://kinglet1.github.io/CSSSecrets/slides/cover.html">https://kinglet1.github.io/CSSSecrets/slides/cover.html</a> &mdash; Слайды
+		</li>
+		<li>
+			<a href="https://github.com/Kinglet1" class="link link_type_github">https://github.com/Kinglet1</a>
+		</li>
+		<li>
+			<a href="http://codepen.io/lucyhackwrench" class="link link_type_codepen">http://codepen.io/lucyhackwrench</a>
+		</li>
+		<li>
+			<a href="http://kinglet1.github.io/CSSrecipes/Airport/AirportDemo/airport.html">http://kinglet1.github.io/CSSrecipes/Airport/AirportDemo/airport.html</a> &mdash; Демо с расписанием аэропорта
+		</li>
+	</ul>
+
+</div>
 
 <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
 <script>
-    $(document).keydown(function(e) {
-        if(e.which == 39) {
-            window.location.replace('https://kinglet1.github.io/CSSSecrets/slides/buy.html');
-        }
-    });
+	$(document).keydown(function(e) {
+		if(e.which == 39) {
+			window.location.replace('https://kinglet1.github.io/CSSSecrets/slides/after.html');
+		}
+	});
 </script>

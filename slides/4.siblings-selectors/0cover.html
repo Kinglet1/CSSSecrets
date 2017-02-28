@@ -5,30 +5,28 @@
     body {
         height: 100%;
         overflow: hidden;
-        background: url('cover.jpg') center center no-repeat;
         background-size: cover;
         font-family: Arial, sans-serif;
         position: relative;
     }
 
-    body:before {
-        content: '';
-        position: absolute;
-        left: 0;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        background: #000;
-        opacity: .3;
+    h1 {
+        bottom: 50px;
+        left: 50px;
     }
 
-    h1 {
-        top: 40%;
-        left: 20px;
+    img {
+	    position: absolute;
+	    right: 50px;
+	    top: 50px;
+	    width: 50%;
+	    height: auto;
     }
 </style>
 
-<h1><span class="highlighted">4.</span> Соседние селекторы ~ и +</h1>
+<h1><span class="highlighted">4.</span> Соседние селекторы<br> ~ и +</h1>
+
+<img src="cover.jpg" alt="">
 
 <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
 <script>

@@ -23,22 +23,20 @@
 <div class="item" style="transform: rotate(40deg); top: 20%; right: 30%">:invalid</div>
 <div class="item" id="target" style="transform: rotate(-30deg); top: 30%; right: 30px">:target</div>
 
+
 <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
 <script>
-    $(document).keypress(function(e) {
-        if(e.which == 13) {
-            $('#target').addClass('highlighted');
-        }
-    });
-</script>
+	var flag = 0;
 
-<script>
-    $(document).keydown(function(e) {
-        if(e.which == 39) {
-            window.location.replace('https://kinglet1.github.io/CSSSecrets/slides/6.counters/0cover.html');
-        }
-    });
+	$(document).keydown(function(e) {
+		if(e.which == 39) {
+			if (!flag) {
+				$('#target').addClass('highlighted');
+				flag = 1;
+			}
+			else {
+				window.location.replace('https://kinglet1.github.io/CSSSecrets/slides/5.target/3airportdemo.html');
+			}
+		}
+	});
 </script>
-
-<div style="position: absolute; color: gray; top: 0; left: 0">press enter</div>
-<div style="position: absolute; color: gray; top: 0; left: 0">then go to airport demo</div>

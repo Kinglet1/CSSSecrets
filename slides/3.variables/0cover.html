@@ -5,30 +5,28 @@
     body {
 		height: 100%;
 		overflow: hidden;
-		background: url('cover.jpg') center center no-repeat;
 		background-size: cover;
 		font-family: Arial, sans-serif;
 		position: relative;
 	}
 
-	body:before {
-		content: '';
-		position: absolute;
-		left: 0;
-		top: 0;
-		right: 0;
-		bottom: 0;
-		background: #000;
-		opacity: .3;
+	h1 {
+		top: 50px;
+		left: 50px;
 	}
 
-	h1 {
-		top: 60%;
-		left: 35%;
-	}
+    img {
+	    position: absolute;
+	    right: 50px;
+	    bottom: 50px;
+	    width: 50%;
+	    height: auto;
+    }
 </style>
 
-<h1><span class="highlighted">6.</span> CSS переменные</h1>
+<h1><span class="highlighted">3.</span> CSS переменные</h1>
+
+<img src="cover.jpg" alt="">
 
 <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
 <script>

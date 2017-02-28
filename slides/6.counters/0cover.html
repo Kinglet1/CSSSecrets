@@ -5,19 +5,40 @@
     body {
         height: 100%;
         overflow: hidden;
-        background: url('cover.jpg') center center no-repeat;
         background-size: cover;
         font-family: Arial, sans-serif;
         position: relative;
     }
 
     h1 {
-        top: 15%;
-        right: 150px;
+	    bottom: 50px;
+	    right: 50px;
+	    width: auto;
     }
+
+    .img-wrapper {
+	    position: absolute;
+	    left: 50px;
+	    top: 50px;
+	    width: 50%;
+	    height: 100%;
+	    overflow: hidden;
+    }
+
+	img {
+		position: absolute;
+		top: 0;
+		right: -25px;
+		width: 100%;
+		height: auto;
+	}
 </style>
 
 <h1><span class="highlighted">6.</span> <span>Селектор<br><span style="white-space: nowrap">:nth-child()</span></span></h1>
+
+<div class="img-wrapper">
+	<img src="cover.jpg" alt="">
+</div>
 
 <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
 <script>
