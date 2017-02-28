@@ -8,8 +8,13 @@
     }
 
     .wrapper__item {
-        width: 30%;
-        padding-top: 30px;
+        width: 50%;
+	    flex-grow: 1;
+	    padding: 40px;
+    }
+
+    .wrapper__item:first-child {
+	    width: 30%;
     }
 
     img {
@@ -19,13 +24,17 @@
         border-radius: 50%;
     }
 
+    .links {
+
+    }
+
     .link {
         display: block;
         position: relative;
         margin-bottom: 10px;
         padding-left: 120px;
         line-height: 100px;
-        font-size: 20px;
+        font-size: 30px;
     }
 
     .link:before {
@@ -70,7 +79,7 @@
     <div class="wrapper__item">
         <div id="links">
             <div class="links">
-                <a href="https://github.com/Kinglet1" class="link link_type_github">github.com/Kinglet1</a>
+                <a href="https://github.com/Kinglet1" class="link link_type_github">Kinglet1</a>
                 <a href="http://codepen.io/lucyhackwrench" class="link link_type_codepen">codepen.io/lucyhackwrench/</a>
                 <a href="https://medium.com/@lucyhackwrench" class="link link_type_medium">medium.com/@lucyhackwrench</a>
             </div>
