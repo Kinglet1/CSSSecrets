@@ -35,3 +35,13 @@ h1 .highlighted {
 a {
     color: #0066cc;
 }
+
+.dot {
+	width: 20px;
+	height: 20px;
+	background: lightgray;
+	border-radius: 10px;
+	position: absolute;
+	right: 20px;
+	top: 20px;
+}
